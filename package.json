@@ -7,10 +7,11 @@
   "types": "dist/esm/index.d.ts",
   "unpkg": "dist/plugin.js",
   "files": [
+    "dist/",
+    "scripts/",
     "android/src/main/",
     "android/libs/",
     "android/build.gradle",
-    "dist/",
     "ios/Plugin/",
     "ios/Bridging-Header.h",
     "CapacitorThermalPrinter.podspec"
@@ -50,7 +51,8 @@
     "build": "npm run clean && npm run docs && tsc && rollup -c rollup.config.js",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "postinstall": "node scripts/copy_resource.js"
   },
   "devDependencies": {
     "@capacitor/android": "^6.0.0",
