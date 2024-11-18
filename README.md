@@ -25,9 +25,23 @@ High-speed, reliable bluetooth ESC thermal printer and encoder Capacitor plugin.
 ## Install
 
 ```bash
-npm install capacitor-thermal-printer
+npm install capacitor-thermal-printer --save
 npx cap sync
 ```
+
+### Additional iOS Setup
+
+<img src="./assets/ios-include.png" />
+
+Open your iOS project in Xcode, then:
+
+1. In the left sidebar, select your project (usually named "App").
+2. Select your main target (usually also named "App").
+3. Navigate to "Build Phases" tab.
+4. Under "Copy Bundle Resources", click the "+" button and choose "Add Other..."
+5. Navigate to the `node_modules/capacitor-thermal-printer/ios/Plugin/Resources/ble_serial.plist` file and select it
+
+And voilà! You're all set!
 
 ## Example
 
